@@ -1,0 +1,22 @@
+@font-face {
+    font-family:'Tungsten-Font' ;
+    src: url(../../Login/fontes/Valorant-Tungsten-Bold.ttf) format(truetype);
+}
+
+header{
+    width: 100%;
+    height: 100px;
+}
+
+.titulo h1{
+    z-index: 100;
+    text-shadow: 0 0 10px #202020 ;
+    margin-top: 90px;
+    color: #b9b9b9;
+    position: relative;
+    bottom: 100px;
+    text-align: center;
+    position: relative;
+    font-family: 'Tungsten-Font';
+    font-size: 100px;
+}
