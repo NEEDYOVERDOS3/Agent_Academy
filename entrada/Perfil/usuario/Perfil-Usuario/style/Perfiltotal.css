@@ -1,0 +1,315 @@
+:root {
+    --header-height: 3.5rem;
+    /*========== Cores ==========*/
+    /*Cores modo HSL(hue, saturation, lightness)*/
+    --first-color: hsl(261, 66%, 11%);
+    --first-color-alt: hsl(268, 61%, 24%);
+    --first-color-light: hsl(278, 48%, 21%);
+    --title-color: hsl(228, 8%, 98%);
+    --text-color: hsl(228, 8%, 70%);
+    --white-color: hsl(228, 8%, 98%);
+    --black-color: hsl(228, 6%, 4%);
+    --body-color: hsl(228, 6%, 8%);
+    --container-color: hsl(228, 6%, 12%);
+    --shadow-img: 0 0 48px hsla(263, 49%, 42%, 0.514);
+    --gradient-card: linear-gradient(180deg,
+                                  rgb(20, 19, 22),
+                                  rgb(64, 46, 107));
+  }
+    /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+        width: .6rem;
+        background-color: hsl(228, 4%, 15%);
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: hsl(228, 4%, 25%);
+    }
+    ::-webkit-scrollbar-thumb:hover{
+        background-color: hsl(225, 44%, 19%);
+  }  
+@font-face {
+    font-family: 'Spiegel-regular';
+    src: url(../../../fontes/Spiegel-Regular.otf) format(opentype) url(../../../fontes/Spiegel_TT_Regular.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'Spiegel-italic';
+    src: url(../../../fontes/Spiegel-RegularItalic.otf) format(opentype) url(../../../fontes/Spiegel_TT_Regular_Italic.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'Semibold';
+    src: url(../../../fontes/Spiegel-SemiBold.otf) format(opentype) url(../../../fontes/Spiegel_TT_SemiBold.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'Tungsten';
+    src: url(../../../fontes/Valorant-Tungsten-Bold.ttf) format(truetype);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Tungsten';
+}
+body{
+    min-height: 100vh;
+    height: 2000px;
+    overflow-x: hidden;
+    background:#0d0618;
+}
+#cabeca{
+    font-family: 'Tungsten';
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #10081b, transparent);
+    z-index: 1000;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#eveFrente{
+    z-index: 6;
+}
+#titulo{
+    z-index: 7;
+    position: absolute;
+    color: #b4b4b4;
+    text-shadow: 0 0 7px #202020;
+    white-space: nowrap;
+    font-size: 7vw;
+    transform: translateY(100px);
+}
+#btn{
+    z-index: 8;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    left: 210px;
+    padding: 8px 30px;
+    border-radius: 9px;
+    background: #f0f0f0;
+    color:#36195c;
+    font-size: 1.5em;
+    transform: translateY(100px);
+    margin-left: -445px;
+}
+.sec{
+    z-index: 9;
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    background: #0d0618;
+}
+.sec #cabeca{
+    text-align: center;
+    margin-top: 1px;
+    color: #b4b4b4;
+    font-size: 5vw;
+}
+.sec li{
+    width: 840px;
+    background: #251838;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 9px;
+    margin-bottom: 7px;
+}
+#conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+    align-items: start;
+    justify-content: center;
+}
+.partidas li #roles{
+    position: relative;
+    width: 25px;
+    margin-left: 8px;
+    margin-bottom: 15px;
+}
+.partidas #champion{
+    width: 60px;
+    margin-right: 10px;
+    margin: 10px;
+}
+.partidas #nome{
+    font-size: 1.5em;
+    color: #f0f0f0;
+    margin-left: 50px;
+    margin-top: -10px;
+    position: relative;
+    top: -0px;
+}
+.vitlos{
+    position: relative;
+    color: #f0f0f0;
+    font-size: 1.5em;
+    margin-left: 150px;
+    margin-top: -25px;
+    top: -60px;
+}
+.conter1{
+    order: -1;
+    display: flex;
+    flex-direction: column;
+}
+#rank{
+    background-color: #3f314e;
+    border-radius: 9px;
+    width: 280px;
+    position: relative;
+    margin: 10px;
+}
+#tabela{
+    color: #f0f0f0;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: -35px;
+}
+#ranked{
+    width: 230px;
+    position: relative;
+    left: 17px;
+    align-items: center;
+    justify-content: center;
+}
+#nome-rank{
+    color: #f0f0f0;
+    font-size: 2.5em;
+    text-align: center;
+}
+#champfav{
+    background-color: #3f314e;
+    border-radius: 9px;
+    width: 280px;
+    position: relative;
+    margin: 10px;
+}
+#favorito,  #campfav{
+    color: #f0f0f0;
+    font-size: 2.5em;
+    text-align: center;
+}
+#fav{
+    width: 90px;
+    margin: 10px;
+    position: relative;
+    left: 25px;
+    align-items: center;
+}
+.conter2{
+    order: 1;
+    display: flex;
+    align-items: center;
+}
+#friends{
+    width: 300px;
+    background-color: #3f314e;
+    border-radius: 9px;
+    position: relative;
+    margin: 10px;
+}
+#amigos{
+    color: #f0f0f0;
+    font-size: 2.5em;
+    text-align: center;
+}
+#nome{
+    color: #f0f0f0;
+    font-size: 1.5em;
+    position: relative;
+    top: -65px;
+    margin-left: 150px;
+    text-decoration: none;
+}
+#foto{
+    border-radius: 7px;
+    margin: 10px;
+    width: 80px;
+    margin-left: 20px;
+}
+
+.stats-container {
+    display: flex;
+    gap: 120px;
+    justify-content: center;
+}
+
+.stat-card {
+    background-image: url('../../../games/LoL/Img/atualizações/dragonmancer\ rakan\ prestige\ skin\ \(2\).jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    height: 430px;
+    text-align: center;
+    position: relative;
+}
+.stat-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #222b56, #222b562f);
+    z-index: 1;
+}
+.progress-bar, .description{
+    z-index: 2;
+    position: relative;
+}
+.stat-card h2{
+    font-size: 4.5vw;
+    color: #00ff88;
+}
+.description{
+    font-size: 2.5vw;
+    color: #b0b0b0;
+}
+.progress-bar{
+    margin: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.progress-bar span{
+    font-size: 1.4vw;
+    color: #cccccc;
+}
+.bar{
+    width: 100%;
+    height: 20px;
+    background-color: #555;
+    border-radius: 2px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+.progress{
+    height: 100%;
+    background-color: #00ff88;
+    width: 0;
+}
