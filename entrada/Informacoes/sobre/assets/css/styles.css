@@ -1,11 +1,11 @@
 /*=============== FONTES ===============*/
 @font-face {
     font-family: 'Tungsten';
-    src: url(../img/fontes/Valorant-Tungsten-Bold.ttf) format(truetype);
+    src: url(../../../../assets/img/fontes/Valorant-Tungsten-Bold.ttf) format(truetype);
 }
 @font-face {
     font-family: 'Spiegel-Bold';
-    src: url(../img/fontes/Spiegel_TT_Bold.ttf) format(truetype), url(../img/fontes/Spiegel-Bold.otf) format(opentype);
+    src: url(../../../../assets/img/fontes/Spiegel_TT_Bold.ttf) format(truetype), url(../../../../assets/img/fontes/Spiegel-Bold.otf) format(opentype);
 }
 
 
@@ -213,26 +213,13 @@ img {
   padding-top: 2.5rem;
   row-gap: 2rem;
 }
-.home__data img{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
-  pointer-events: none;
-  z-index: 1;
-}
-.home__data img#killjoy_png{
-  position: relative;
-  max-width: 50%;
-  width: auto;
-  height: auto;
-  transform: translateX(260px);
+.home__img{
+  width: 270px;
+  filter: drop-shadow(var(--shadow-img));
+  justify-self: center;
 }
 .home__text{
   position: relative;
-  transform: translateY(-150px);
   z-index: 2;
 }
 .home__data{
@@ -249,12 +236,6 @@ img {
 .home__description{
   margin-bottom: 1.75rem;
   font-size: 1.5rem;
-}
-.home__buttons{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: .5rem;
 }
 /*=============== BUTTON ===============*/
 .button{
@@ -288,11 +269,13 @@ img {
 .button__link:hover{
   color: var(--first-color);
 }
-/*=============== NEWS ===============*/
+/*=============== NOVIDADES ===============*/
 .new__data{
-  text-align: center;
+  display: grid;
+  row-gap: .25rem;
 }
 .new__container{
+  position: relative;
   row-gap: 4.5rem;
   display: flex;
   align-items: center;
@@ -303,168 +286,54 @@ img {
   row-gap: 4rem;
   align-items: center;
 }
-.new__card{
-  position: relative;
-  width: 900px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.new__title{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-regular);
 }
-/* EFEITOS CORTINA E GAMES */
-.cortina{
-    align-items: center;
-    position: relative;
-    padding: 1%;
-    height: 43%;
-    width: 52%;
+.new__data:nth-child(1){
+  margin-left: 1.5rem;
 }
-.imagem-mostruario{
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    max-width: 650px;
-    max-height: auto;
-    overflow: hidden;
-    border-radius: 9px;
+.new__data:nth-child(2){
+  margin-right: 10rem;
+  z-index: 2;
+  width: 250px;
 }
-.imagem-mostruario img {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s ease;
+.new__data:nth-child(3){
+  z-index: 2;
+  margin-top: -2.4rem;
 }
-/*
-.imagem-mostruario:hover img{
-    transform: scale(1.1);
+.new__img{
+  width: 300px;
+  position: absolute;
+  top: 4rem;
+  right: -4rem;
+  filter: drop-shadow(var(--shadow-img));
 }
-.cortina-efx{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    pointer-events: none;
-    transition: height 0.5s ease;
-}
-.conter:hover .cortina-efx{
-    height: 100%;
-}
-.text-sobimagem{
-    font-family: 'Spiegel-Bold';
-    text-decoration: none;
-    font-size: 3.5em;
-    position: absolute;
-    color: #f0f0f0;
-    top: 10%;
-    left: 10%;
-    z-index: 2;
-}
-.text-sobimagem{
-    font-family: 'Spiegel-Bold';
-    text-decoration: none;
-    position: absolute;
-    color: #f0f0f0;
-    left: 16px;
-    text-align: center;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-.cortina:hover .text-sobimagem{
-    opacity: 1;
-}
-    */
-.text-sobimagem h3{
-    font-size: 3.5em;
-}
-.text-sobimagem p{
-    font-size: 1.7em;
-    text-decoration: none;
-    color: var(--text-color);
-}
-    
-.imagem-mostruario2{
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    max-width: 650px;
-    max-height: auto;
-    overflow: hidden;
-    border-radius: 9px;
-}
-.imagem-mostruario2 img {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s ease;
-}
-/*
-.imagem-mostruario2:hover img{
-    transform: scale(1.1);
-}
-.cortina-efx2{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    pointer-events: none;
-    transition: height 0.5s ease;
-}
-.conter:hover .cortina-efx2{
-    height: 100%;
-}
-    */
-
-
 /*=============== SHOP ===============*/
 .shop__container{
-  padding-top: 6.5rem;
-  grid-template-columns: repeat(2,1fr);
-  gap: 6rem 1.5rem;
-}
-.shop__card{
   position: relative;
-  background: var(--gradient-card);
-  padding: 5.75rem .75rem 1.25rem .75rem;
-  border: 2px solid var(--first-color-light);
-  border-radius: 1rem;
 }
 .shop__img{
+  height: 520px;
+  width: auto;
   position: absolute;
-  top: -4.5rem;
-  left: 0;
-  right: 0;
-  width: 130px;
-  margin: 0 auto;
-  transition: transform .4s;
+  left: -12.8rem;
 }
-.shop__title{
-  font-size: var(--small-font-size);
-  font-weight: var(--font-semi-bold);
-  margin-bottom: .5rem;
+.shop__description{
+  font-size: var(--h2-font-size);
 }
-.shop__info{
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+.shop__data .button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  padding: 1rem 1.25rem;
+  border-radius: .5rem;
+  transition: .3s;
+  font-size: 1.2rem;
+  margin-top: .5rem;
 }
-.shop__button{
-  position: absolute;
-  right: .75rem;
-  bottom: .75rem;
-  outline: none;
-  border: none;
-  background-color: var(--white-color);
-  padding: 6px;
-  border-radius: 50%;
-  font-size: 1.25rem;
-  display: grid;
-  cursor: pointer;
-}
-.shop__card:hover .shop__img{
-  transform: translateY(-.5rem);
+.shop__data .button:hover{
+  background-color: var(--first-color-alt);
 }
 
 /*=============== CARE ===============*/
@@ -554,11 +423,6 @@ img {
 ::-webkit-scrollbar-thumb{
   background-color: rgba(43, 34, 65, 0.999);
 }
-/*=============== SCROLL UP ===============*/
-
-
-/* Show Scroll Up */
-
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
@@ -568,10 +432,6 @@ img {
   }
   .container{
     margin-inline: 1rem;
-  }
-  .home__data img#killjoy_png{
-    position: relative;
-    transform: translateX(110px);
   }
   .home__title{
     font-size: 2rem;
@@ -583,13 +443,36 @@ img {
   .new__container{
     grid-template-columns: 160px;
   }
-  .new__card{
-    width: 470px;
-    font-size: var(--small-font-size);
+  .new__data:nth-child(1){
+    z-index: 2;
+  }
+  .new__data:nth-child(2){
+    margin-right: 3rem;
+    z-index: 2;
+    width: 250px;
+    text-shadow: 
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+  }
+  .new__data:nth-child(3){
+    z-index: 2;
+    margin-top: -3.4rem;
   }
   .shop__container{
-    grid-template-columns: 160px;
-    justify-content: center;
+    position: relative;
+  }
+  .shop__img{
+    position: absolute;
+    object-fit: cover;
+    width: 900px;
+    height: 350px;
+    left: 0;
+  }
+  .shop__data{
+    width: 270px;
+    margin-top: 22.5rem;
   }
   .footer__content{
     grid-template-columns: max-content;
@@ -601,10 +484,6 @@ img {
   }
   .container{
     margin-inline: 1rem;
-  }
-  .home__data img#killjoy_png{
-    position: relative;
-    transform: translateX(120px);
   }
   .home__title{
     font-size: 3rem;
@@ -621,11 +500,35 @@ img {
     font-size: var(--small-font-size);
   }
   .shop__container{
-    grid-template-columns: 220px;
-    justify-content: center;
+    position: relative;
+  }
+  .shop__img{
+    position: absolute;
+    object-fit: cover;
+    width: 900px;
+    height: 350px;
+    left: 0;
+  }
+  .shop__data{
+    margin-top: 22.5rem;
   }
   .footer__content{
     grid-template-columns: max-content;
+  }
+}
+@media screen and (max-width: 575px){
+  .shop__container{
+    position: relative;
+  }
+  .shop__img{
+    position: absolute;
+    object-fit: cover;
+    width: 900px;
+    height: 350px;
+    left: 0;
+  }
+  .shop__data{
+    margin-top: 22.5rem;
   }
 }
 /* For medium devices */
@@ -634,9 +537,59 @@ img {
     grid-template-columns: 400px;
     justify-content: center;
   }
+  .home__container {
+    grid-template-columns: .8fr 1fr;
+  }
+  .home__data {
+    padding-top: 6rem;
+  }
+  .new__img{
+    width: 400px;
+    top: 2rem;
+    right: -4rem;
+  }
+  .new__data .section__title{
+    font-size: 2rem;
+  }
+  .new__description{
+    font-size: var(--h1-font-size);
+  }
+  .new__data:nth-child(1){
+    z-index: 2;
+    text-shadow: 
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+  }
+  .new__data:nth-child(2){
+    width: 330px;
+    margin-top: -2rem;
+    text-shadow: 
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+  }
+  .new__data:nth-child(3){
+    margin-top: -3.8rem;
+  }
+  .shop__data{
+    padding: 0;
+  }
   .shop__container{
-    grid-template-columns: repeat(2, 160px);
+    grid-template-columns: max-content 250px;
     justify-content: center;
+    align-items: center;
+  }
+  .shop__img{
+    width: 250px;
+    position: initial;
+    object-fit: cover;
+    object-position: right;
+  }
+  .shop__description{
+    font-size: 1.45rem;
   }
   .footer__content{
     grid-template-columns: repeat(3, max-content);
@@ -646,16 +599,32 @@ img {
   .nav__menu{
     width: 50%;
   }
-  .new__content{
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
+  .new__img{
+    width: 400px;
+    top: 5.3rem;
+    right: -4rem;
   }
-  .new__card{
-    width: 370px;
-    font-size: var(--small-font-size);
+  .new__data:nth-child(2){
+    width: 430px;
+    margin-top: 0rem;
+    margin-right: 16rem;
+  }
+  .new__data:nth-child(3){
+    margin-top: -.7rem;
   }
   .shop__container{
-    grid-template-columns: repeat(3, 160px);
+    grid-template-columns: max-content 350px;
+    justify-content: center;
+    align-items: center;
+  }
+  .shop__img{
+    width: 350px;
+    position: initial;
+    object-fit: cover;
+    object-position: center;
+  }
+  .shop__description{
+    font-size: 1.7rem;
   }
   .footer__container{
     grid-template-columns: repeat(2, max-content);
@@ -704,19 +673,8 @@ img {
     pointer-events: none;
     z-index: 1;
   }
-  .home__data img#killjoy_png{
-    position: relative;
-    transform: translateX(120px);
-    max-width: 100%;
-    width: auto;
-    height: auto;
-  }
   .home__title{
     font-size: 6rem;
-    transform: translateY(-160px)
-  }
-  .home__buttons{
-    transform: translateY(-200px)
   }
   .new__container{
     align-items: center;
@@ -724,125 +682,32 @@ img {
     padding: 3rem;
   }
   .new__data .section__title{
-    font-size: 4.6rem;
+    font-size: 3rem;
   }
-  .new__description{
-    font-size: 4rem;
+  .new__img{
+    width: 600px;
+    top: 10.5rem;
+    right: -4rem;
   }
-  .new__content{
-     transform: translatex(-240px)
+  .new__data:nth-child(2){
+    width: 630px;
+    margin-top: 0rem;
+    margin-right: 30rem;
   }
-  .new__card{
-    width: 200%;
-  }
-  .cortina{
-      align-items: center;
-      position: relative;
-      padding: 1%;
-      height: 43%;
-      width: 52%;
-  }
-  .imagem-mostruario{
-      position: relative;
-      display: inline-block;
-
-      max-height: auto;
-      overflow: hidden;
-      border-radius: 9px;
-  }
-  .imagem-mostruario img {
-      display: block;
-      width: 100%;
-      height: auto;
-      transition: transform 0.5s ease;
-  }
-  .imagem-mostruario:hover img{
-      transform: scale(1.1);
-  }
-  .cortina-efx{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 0;
-      background-color: rgba(0, 0, 0, 0.7);
-      pointer-events: none;
-      transition: height 0.5s ease;
-  }
-  .conter:hover .cortina-efx{
-      height: 100%;
-  }
-  .text-sobimagem{
-      font-family: 'Tungsten';
-      text-decoration: none;
-      font-size: .6em;
-      position: absolute;
-      color: #f0f0f0;
-      top: 10%;
-      left: 10%;
-      z-index: 2;
-  }
-  .text-sobimagem{
-      font-family: 'Tungsten';
-      text-decoration: none;
-      position: absolute;
-      color: #f0f0f0;
-      left: 16px;
-      text-align: center;
-      z-index: 2;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-  }
-  .cortina:hover .text-sobimagem{
-      opacity: 1;
-  }
-  .text-sobimagem h2{
-      font-size: .9em;
-  }
-  .text-sobimagem p{
-      font-size: 45px;
-  }
-  .imagem-mostruario2{
-      position: relative;
-      display: inline-block;
-
-      max-height: auto;
-      overflow: hidden;
-      border-radius: 9px;
-  }
-  .imagem-mostruario2 img {
-      display: block;
-      width: 100%;
-      height: auto;
-      transition: transform 0.5s ease;
-  }
-  .imagem-mostruario2:hover img{
-      transform: scale(1.1);
-  }
-  .cortina-efx2{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 0;
-      background-color: rgba(0, 0, 0, 0.7);
-      pointer-events: none;
-      transition: height 0.5s ease;
-  }
-  .conter:hover .cortina-efx2{
-      height: 100%;
+  .new__data:nth-child(3){
+    margin-top: 3.3rem;
   }
   .shop__container{
-    grid-template-columns: repeat(3, 240px);
+    grid-template-columns: max-content 650px;
     gap: 8.5rem 4rem;
     padding-top: 7.5rem;
   }
-  .shop__card{
-    padding: 10.5rem 1.5rem 2rem;
-    border-radius: 1.5rem;
+  .shop__description{
+    width: 500px;
+    font-size: 2.1rem;
   }
   .shop__img{
-    width: 210px;
+    width: 710px;
     top: -5.5rem;
   }
   .shop__title{
