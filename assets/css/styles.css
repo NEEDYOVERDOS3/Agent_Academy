@@ -150,6 +150,7 @@ video {
   border-radius: 1rem;
   z-index: 1;
   transition: border-color .4s;
+  color: var(--white-color);
 }
 
 .login__input:autofill {

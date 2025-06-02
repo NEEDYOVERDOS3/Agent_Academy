@@ -35,7 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: entrada/index.html"); // <- altere para o nome da sua página HTML
         exit;
     } else {
-        echo "<p style='color:red; text-align:center;'>E-mail ou senha incorretos.</p>";
+        echo "<script>
+        alert('E-mail ou senha incorretos!');
+        window.location.href = 'index.html'; 
+    </script>";
+
     }
 
     $stmt->close();

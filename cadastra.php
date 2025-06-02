@@ -31,7 +31,10 @@ if($_SERVER ["REQUEST_METHOD"]=="POST"){
 
     if($row){
         
-         echo"<p style = 'color:red; text-align: center; font-size:25px;'>Usuário ou e-mail já registrado</p>";
+         echo "<script>
+        alert('ERRO. E-MAIL JÁ REGISTRADO!');
+        window.location.href = 'index.html'; 
+    </script>";
         
     } else {
 
@@ -40,13 +43,14 @@ if($_SERVER ["REQUEST_METHOD"]=="POST"){
 
     } if($retorno ===true){
 
-        echo"<p style = 'color:green; text-align: center; font-size:25px;'>CADASTRO REALIZADO!! <br> Retorne para a tela de login.</p>";
-        echo "<a href='index.html' style='display:inline-block; margin-top:20px; padding:10px 20px; background-color:#4CAF50; color:black; text-decoration:none; border-radius:5px;'>Ir para o Login</a>";
+        echo "<script>
+        alert('CADASTRO REALIZADO!!');
+        window.location.href = 'index.html'; 
+    </script>";
 
     } else {
 
          echo"<p style = 'color:red; text-align: center; font-size:25px;'>Erro ao cadastrar usuário.</p>;";
-         
 
     }
 
