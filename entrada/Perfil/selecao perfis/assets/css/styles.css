@@ -219,6 +219,77 @@ img {
   margin-bottom: 1.75rem;
   font-size: 1.5rem;
 }
+/*=============== SELEÇÃO DE JOGADORES ===============*/
+.select__container{
+  position: relative;
+  display: grid;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction:row;
+}
+.filtros{
+  display: flex;
+  gap: 4rem 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.filter{
+  text-align: center;
+  width: 12rem;
+  height: 3rem;
+}
+.filtros select{
+  background-color:var(--first-color);
+  color: var(--white-color);
+  border: 2px solid var(--title-color);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  appearance: none;
+}
+#filtro-jogo, #filtro-rota, #filtro-genero{
+  display: inline-flex;
+  background-color: var(--first-color-alt);
+  box-shadow: 0 0 12px hsl(258, 90%, 50%);
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+  color: var(--white-color);
+  font-size: var(--font-regular);
+  font-weight: var(--font-semi-bold);
+  transition: box-shadow .4s;
+}
+#filtro-jogo:hover {
+  box-shadow: 0 0 20px hsl(258, 90%, 50%);
+}
+#filtro-rota:hover {
+  box-shadow: 0 0 20px hsl(258, 90%, 50%);
+}
+#filtro-genero:hover {
+  box-shadow: 0 0 20px hsl(258, 90%, 50%);
+} 
+.question__container{
+  padding-top: 2.5rem;
+  row-gap: 2rem;
+}
+.question__data{
+  text-align: center;
+  color: var(--title-color);
+}
+.question__button {
+  width: 12rem;
+  height: 3rem;
+  background-color: var(--first-color-alt);
+  box-shadow: 0 0 12px hsl(258, 90%, 50%);
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+  color: var(--white-color);
+  font-size: var(--big-font-size);
+  font-weight: var(--font-semi-bold);
+  transition: box-shadow .4s;
+}
+.question__button:hover {
+  box-shadow: 0 0 20px hsl(258, 90%, 50%);
+}
 /*=============== CARD ===============*/
 .card {
   position: relative;
@@ -244,7 +315,6 @@ img {
   height: 100%;
   object-fit: cover;
 }
-
 .card__shadow {
   position: absolute;
   top: 0;
@@ -255,24 +325,20 @@ img {
             hsla(0, 0%, 0%, 0) 70%, 
             hsl(0, 0%, 0%) 100%);
 }
-
 .card__data {
   color: var(--white-color);
   position: absolute;
   left: 1.5rem;
   bottom: 2rem;
 }
-
 .card__name {
   font-size: var(--big-font-size);
   margin-bottom: .25rem;
 }
-
 .card__profession {
   display: block;
   font-size: var(--small-font-size);
 }
-
 .card__clip {
   position: absolute;
   top: 1rem;
@@ -290,11 +356,9 @@ img {
   cursor: pointer;
   transition: transform .4s;
 }
-
 .card__article:hover .card__img {
   transform: scale(1.1);
 }
-
 /*=============== CARD INFO ===============*/
 .info {
   position: absolute;
@@ -486,8 +550,33 @@ img {
     column-gap: 4.7rem;
     font-size: 1.7em;
   }
+  .home__container{
+  padding-top: 2.5rem;
+  row-gap: 2rem;
+  }
+  .home__text{
+    color: var(--white-color);
+    position: relative;
+    z-index: 2;
+  }
+  .home__data{
+    text-align: center;
+  }
+  .home__title{
+    font-size: 4rem;
+    font-weight: var(--font-bold);
+    margin-bottom: .5rem;
+    text-align: center;
+  }
+  .home__title span{
+    color: var(--first-color);
+  }
+  .home__description{
+    color: var(--text-color);
+    margin-bottom: 1.75rem;
+    font-size: 1.5rem;
+  }
   .card {
-    height: 100vh;
     display: grid;
     place-content: center;
   }

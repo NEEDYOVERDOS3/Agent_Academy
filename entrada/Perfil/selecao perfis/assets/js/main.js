@@ -32,3 +32,53 @@ const blurHeader = () =>{
                      : header.classList.remove('blur-header')
 }
 window.addEventListener('scroll', blurHeader)
+
+/*=============== SELETOR DE JOGADORES ===============*/
+function atualizarFiltro() {
+  const jogo = document.getElementById('filtro-jogo').value.toLowerCase();
+  const rota = document.getElementById('filtro-rota').value.toLowerCase();
+  const genero = document.getElementById('filtro-genero').value.toLowerCase();
+
+  const cards = document.querySelectorAll('.card__article');
+
+  cards.forEach(card => {
+    const dataJogo = card.dataset.jogo?.toLowerCase() || "";
+    const dataRota = card.dataset.rota?.toLowerCase() || "";
+    const dataGenero = card.dataset.genero?.toLowerCase() || "";
+
+    const matchJogo = !jogo || dataJogo.includes(jogo);
+    const matchRota = !rota || dataRota.split(/[\s,]+/).includes(rota);
+    const matchGenero = !genero || dataGenero.includes(genero);
+
+    const mostrar = matchJogo && matchRota && matchGenero;
+
+    card.style.display = mostrar ? 'block' : 'none';
+  });
+}
+/*=============== QUESTIONARIO PARA JOGADORES ===============*/
+  document.getElementById('questionario-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const selecionados = [];
+    document.querySelectorAll('input[name="dificuldades"]:checked').forEach(input => {
+      selecionados.push(input.value);
+    });
+
+    // Armazena no localStorage
+    localStorage.setItem('filtrosDificuldade', JSON.stringify(selecionados));
+
+    // Redireciona para a tela dos coachs
+    window.location.href = '../index.html';
+  });
+
+window.addEventListener('DOMContentLoaded', () => {
+  const dificuldades = JSON.parse(localStorage.getItem('filtrosDificuldade')) || [];
+
+  document.querySelectorAll('.card__article').forEach(card => {
+    const tags = card.getAttribute('data-dificuldades')?.split(',') || [];
+
+    // Se tiver filtros, esconde os que não combinam
+    if (dificuldades.length > 0 && !dificuldades.some(d => tags.includes(d))) {
+      card.style.display = 'none';
+    }
+  });
+});

@@ -67,10 +67,40 @@
             </div>
          </div>
       </section>
+               <!--==================== SELECIONAR PLAYER ====================-->
+      <section class="select section">
+         <div class="select__container container">
+            <div class="filtros">
+               <select id="filtro-jogo" class="filter" onchange="atualizarFiltro()">
+                  <option value="">Todos os jogos</option>
+                  <option value="League of Legends">League of Legends</option>
+                  <option value="Valorant">Valorant</option>
+               </select>
+
+               <select id="filtro-rota" class="filter" onchange="atualizarFiltro()">
+                  <option value="">Todas as rotas</option>
+                  <option value="topo">Topo</option>
+                  <option value="meio">Meio</option>
+                  <option value="jungle">Jungle</option>
+                  <option value="adc">ADCarry</option>
+                  <option value="suporte">Suporte</option>
+               </select>
+
+               <select id="filtro-genero" class="filter" onchange="atualizarFiltro()">
+                  <option value="">Todos os gêneros</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="feminino">Feminino</option>
+               </select>
+               </div>
+         </div>
+      </section>
                <!--==================== CARD ====================-->
       <section class="card section">
          <div class="card__container container">
-            <article class="card__article card-yellow">
+            <article class="card__article card-yellow" data-jogo="League of Legends"
+                                                      data-rota="topo meio"
+                                                      data-genero="masculino"
+                                                      data-dificuldades="farmar,batalha">
                <img src="Coach/assets/img/about-perfil.png" alt="image" class="card__img">
                <div class="card__shadow"></div>
    
@@ -107,7 +137,9 @@
                </div>
             </article>
    
-            <article class="card__article card-green">
+            <article class="card__article card-green" data-jogo="Valorant"
+                                                      data-rota="Iniciador"
+                                                      data-genero="masculino">
                <img src="assets/img/fallen-comer-cu.png" alt="image" class="card__img">
                <div class="card__shadow"></div>
 
@@ -126,7 +158,7 @@
                      <p class="info__description">
                         
                      </p>
-                     <a href="#" class="info__button">Entrar</a>
+                     <a href="Coach/Index (2).html" class="info__button">Entrar</a>
                   </div>
    
                   <div class="info__social">
@@ -143,7 +175,9 @@
                </div>
             </article>
    
-            <article class="card__article card-pink">
+            <article class="card__article card-pink" data-jogo="League of Legends"
+                                                      data-rota="meio jungle"
+                                                      data-genero="masculino">
                <img src="assets/img/yoda.png" alt="image" class="card__img">
                <div class="card__shadow"></div>
 
@@ -162,7 +196,7 @@
                      <p class="info__description">
                         
                      </p>
-                     <a href="#" class="info__button">Entrar</a>
+                     <a href="Coach/Index (7).html" class="info__button">Entrar</a>
                   </div>
    
                   <div class="info__social">
@@ -179,7 +213,9 @@
                </div>
             </article>
 
-            <article class="card__article card-yellow">
+            <article class="card__article card-yellow" data-jogo="League of Legends"
+                                                      data-rota="adc suporte"
+                                                      data-genero="feminino">
                <img src="assets/img/namorada do talento.png" alt="image" class="card__img">
                <div class="card__shadow"></div>
    
@@ -198,7 +234,159 @@
                      <p class="info__description">
                         
                      </p>
-                     <a href="Coach/index.html" class="info__button">Entrar</a>
+                     <a href="Coach/Index (1).html" class="info__button">Entrar</a>
+                  </div>
+   
+                  <div class="info__social">
+                     <a href="#" target="_blank" class="info__link">
+                        <i class="ri-twitch-line"></i>
+                     </a>
+                     <a href="https://www.instagram.com/" target="_blank" class="info__link">
+                        <i class="ri-instagram-line"></i>
+                     </a>
+                     <a href="https://twitter.com/" target="_blank" class="info__link">
+                        <i class="ri-twitter-x-line"></i>
+                     </a>
+                  </div>
+               </div>
+            </article>
+
+            <article class="card__article card-green" data-jogo="League of Legends"
+                                                      data-rota="suporte jungle"
+                                                      data-genero="feminino">
+               <img src="Coach/assets/img/liz loud- (1).png" alt="image" class="card__img">
+               <div class="card__shadow"></div>
+
+               <div class="card__data">
+                  <h2 class="card__name">Liz</h2>
+                  <span class="card__profession">League of Legends</span>
+               </div>
+   
+               <div class="card__clip">
+                  <i class="ri-menu-4-line"></i>
+               </div>
+
+               <div class="info">
+                  <div class="info__data">
+                     <h2 class="info__name">Liz</h2>
+                     <p class="info__description">
+                        
+                     </p>
+                     <a href="Coach/Index (3).html" class="info__button">Entrar</a>
+                  </div>
+   
+                  <div class="info__social">
+                     <a href="#" target="_blank" class="info__link">
+                        <i class="ri-twitch-line"></i>
+                     </a>
+                     <a href="https://www.instagram.com/" target="_blank" class="info__link">
+                        <i class="ri-instagram-line"></i>
+                     </a>
+                     <a href="https://twitter.com/" target="_blank" class="info__link">
+                        <i class="ri-twitter-x-line"></i>
+                     </a>
+                  </div>
+               </div>
+            </article>
+
+            <article class="card__article card-green" data-jogo="League of Legends"
+                                                      data-rota="meio top adc suporte"
+                                                      data-genero="masculino">
+               <img src="Coach/assets/img/FAKER.png" alt="image" class="card__img">
+               <div class="card__shadow"></div>
+
+               <div class="card__data">
+                  <h2 class="card__name">FAKER</h2>
+                  <span class="card__profession">League of Legends</span>
+               </div>
+   
+               <div class="card__clip">
+                  <i class="ri-menu-4-line"></i>
+               </div>
+
+               <div class="info">
+                  <div class="info__data">
+                     <h2 class="info__name">FAKER</h2>
+                     <p class="info__description">
+                        
+                     </p>
+                     <a href="Coach/Index (4).html" class="info__button">Entrar</a>
+                  </div>
+   
+                  <div class="info__social">
+                     <a href="#" target="_blank" class="info__link">
+                        <i class="ri-twitch-line"></i>
+                     </a>
+                     <a href="https://www.instagram.com/" target="_blank" class="info__link">
+                        <i class="ri-instagram-line"></i>
+                     </a>
+                     <a href="https://twitter.com/" target="_blank" class="info__link">
+                        <i class="ri-twitter-x-line"></i>
+                     </a>
+                  </div>
+               </div>
+            </article>
+
+            <article class="card__article card-green" data-jogo="League of Legends"
+                                                      data-rota="suporte"
+                                                      data-genero="feminino">
+               <img src="Coach/assets/img/thaiga-1.png" alt="image" class="card__img">
+               <div class="card__shadow"></div>
+
+               <div class="card__data">
+                  <h2 class="card__name">Thaiga</h2>
+                  <span class="card__profession">League of Legends</span>
+               </div>
+   
+               <div class="card__clip">
+                  <i class="ri-menu-4-line"></i>
+               </div>
+
+               <div class="info">
+                  <div class="info__data">
+                     <h2 class="info__name">Thaiga</h2>
+                     <p class="info__description">
+                        
+                     </p>
+                     <a href="Coach/Index (5).html" class="info__button">Entrar</a>
+                  </div>
+   
+                  <div class="info__social">
+                     <a href="#" target="_blank" class="info__link">
+                        <i class="ri-twitch-line"></i>
+                     </a>
+                     <a href="https://www.instagram.com/" target="_blank" class="info__link">
+                        <i class="ri-instagram-line"></i>
+                     </a>
+                     <a href="https://twitter.com/" target="_blank" class="info__link">
+                        <i class="ri-twitter-x-line"></i>
+                     </a>
+                  </div>
+               </div>
+            </article>
+
+            <article class="card__article card-green" data-jogo="League of Legends"
+                                                      data-rota="meio top"
+                                                      data-genero="masculino">
+               <img src="Coach/assets/img/tinow- (1).png" alt="image" class="card__img">
+               <div class="card__shadow"></div>
+
+               <div class="card__data">
+                  <h2 class="card__name">Tinows</h2>
+                  <span class="card__profession">League of Legends</span>
+               </div>
+   
+               <div class="card__clip">
+                  <i class="ri-menu-4-line"></i>
+               </div>
+
+               <div class="info">
+                  <div class="info__data">
+                     <h2 class="info__name">Tinows</h2>
+                     <p class="info__description">
+                        
+                     </p>
+                     <a href="Coach/Index (6).html" class="info__button">Entrar</a>
                   </div>
    
                   <div class="info__social">
@@ -216,6 +404,27 @@
             </article>
          </div>
       </section>
+            <!--==================== QUESTIONARIO ====================-->
+      <!--
+            <section class="question section">
+         <div class="question__container container grid">
+            <div class="question__data">
+               <div class="home__text">
+                     <h1 class="home__title">
+                        <span>QUESTIONARIO</span>
+                     </h1>
+                     <P class="home__description">
+                        Gostaria de uma lista de Coachs mais precisa ao que você precisa?
+                     </P>
+                     <h2 class="home__description">
+                        Complete esse questionario!
+                     </h2>
+               </div>
+               <a href="Dificuldades/index.html" class="question__button">Entrar</a>
+            </div>
+         </div>
+      </section>
+      -->
             <!--==================== FOOTER ====================-->
       <footer class="footer">
          <div class="footer__container container grid">
